@@ -1,0 +1,353 @@
+:root {
+    --purple: #9845E8;
+    --blue: #33D2FF;
+    --pink: #DD5789;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;500;600;700&display=swap');
+
+@keyframes background-pan {
+    from {
+        background-position: 0% center;
+    }
+
+    to {
+        background-position: -200% center;
+    }
+}
+
+@keyframes bounce-arrow {
+    from {
+        left: 0%;
+        opacity: 0.7;
+    }
+
+    to {
+        left: 10px;
+        opacity: 1;
+    }
+}
+
+@keyframes wave-animation {
+    0% { transform: rotate( 0.0deg) }
+   10% { transform: rotate(14.0deg) }  /* The following five values can be played with to make the waving more or less extreme */
+   20% { transform: rotate(-8.0deg) }
+   30% { transform: rotate(14.0deg) }
+   40% { transform: rotate(-4.0deg) }
+   50% { transform: rotate(10.0deg) }
+   60% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
+  100% { transform: rotate( 0.0deg) }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* The navigation bar */
+.navbar {
+    background-color: rgba(10, 10, 10, 0.635);
+    backdrop-filter: blur(10px);
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 73%; /* Full width */
+    z-index: 1;
+  }
+  
+  /* Links inside the navbar */
+.navbar a {
+    float: right;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 20px 20px;
+    text-decoration: none;
+  }
+  
+  /* Change background on mouse-over */
+.navbar a:hover {
+    text-decoration: underline;
+  }
+
+body {
+    font-family: 'League Spartan', sans-serif;
+    margin: auto;
+    margin-top: 50px;
+    background-color: rgb(10, 10, 10);
+    display: grid;
+    max-width: 73%;
+}
+
+.hero > h1 {
+    color:white;
+    font-size: 48px;
+    font-weight: 500;
+    text-align: left;
+}
+
+.hero > h1 > .intro {
+    font-size: 24px;
+    line-height: 2;
+}
+
+.hero > h1 > .intro:hover span {
+    animation-name: wave-animation;  /* Refers to the name of your @keyframes element below */
+    animation-duration: 2.5s;        /* Change to speed up or slow down */
+    animation-iteration-count: infinite;  /* Never stop waving :) */
+    transform-origin: 70% 70%;       /* Pivot around the bottom-left palm */
+    display: inline-block;
+}
+
+.hero > h1 > .magic {
+
+    font-size: clamp(2em, 2vw, 4em);
+    animation: background-pan 3s linear infinite;
+    background-image: linear-gradient(to right, var(--purple), var(--blue), var(--pink), var(--purple));
+    
+    background-size: 200%;
+  
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+  }
+
+h1 > .date {
+    color: #c4c4c4;
+    font-weight: 300;
+    position: relative;
+    float: right;
+    font-size: 16px;
+}
+
+h2 {
+    line-height: 24px;
+    color: #f0f0f0;
+    font-weight: 200;
+    font-style: normal;
+    
+    padding-top: 20px;
+    text-align: left;
+    display: inline-block; 
+}
+
+h3 { 
+    color:white;
+    font-size: 20px;
+    font-weight: 300;
+    
+    padding-top: 20px;
+    text-align: left;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+}
+
+h3:hover span {
+    animation: bounce-arrow 1s alternate infinite;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.title {
+    color:white;
+    font-size: 20px;
+    font-weight: 100;
+    
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: left;
+}
+
+p {
+    margin: 25px 50px 75px;
+}
+
+.button {
+    background-color: black;
+    border-radius: 6px;
+    border: 0;
+    color: #868686;
+    padding: 10px max(10px, 5%);
+    text-align: center;
+    display: inline-flex;
+    font-size: 14px;
+    transition: all 0.5s;
+    cursor: pointer;
+  }
+
+.button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.button:hover {
+    background-color: #1e1e1e;
+}
+
+.button:focus {
+    background-color: #1e1e1e;
+}
+
+.content > .comp {
+    color: #6CACE4;
+    font-size: 16px;
+    font-weight: 200;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.content > .exp {
+    line-height: 24px;
+    color: #C4C4C4;
+    font-size: 14px;
+    font-weight: 200;
+    text-align: left;
+}
+
+.divider {
+    margin-top: 60px;
+    margin-bottom: 50px;
+    height: 1px;
+    background: #C6C6C6;
+  }
+
+/* exp container */
+
+.exp-container > #desc {
+    margin-top: 20px;
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    transition: 0.5s;
+    visibility: hidden;
+    max-width: 73%;
+}
+
+.exp-container > *:focus ~ #desc {
+    opacity: 1;
+}
+
+.exp-container > p {
+    margin-top: 150px;
+}
+
+/* ominous */
+
+/* position title */
+.exp-container > #OMI:focus ~ #desc > .top > h1:before {
+    color: white;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    visibility: visible;
+    opacity: 1;
+    content: "Graphic Design Lead";
+}
+
+/* dates */
+.exp-container > #OMI:focus ~ #desc > .top > .date:before {
+    visibility: visible;
+    opacity: 1;
+    content: "July 2021 - July 2022";
+}
+
+/* description */
+.exp-container > #OMI:focus ~ #desc > .content > .exp::before {
+    visibility: visible;
+    opacity: 1;
+    content: "Developed screens and UI components for web application using React and Tailwind. Fixed UI issues and integrated backend APIs utilizing Redux Saga.";
+}
+
+/* location */
+.exp-container > #OMI:focus ~ #desc > .content > .comp::before {
+    visibility: visible;
+    opacity: 1;
+    content: "Remote";
+}
+
+/* rocketcards */
+
+/* position title */
+.exp-container > #RC:focus ~ #desc > .top > h1:before {
+    color: white;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    visibility: visible;
+    opacity: 1;
+    content: "UX Designer";
+}
+
+/* dates */
+.exp-container > #RC:focus ~ #desc > .top > .date:before {
+    visibility: visible;
+    opacity: 1;
+    content: "November 2021 - March 2022";
+}
+
+/* description */
+
+.exp-container > #RC:focus ~ #desc > .content > .exp::before {
+    visibility: visible;
+    opacity: 1;
+    content: "Created entire UX layout with components, provided detailed notes on parts of design for conversion into HTML.";
+}
+
+/* location */
+.exp-container > #RC:focus ~ #desc > .content > .comp::before {
+    visibility: visible;
+    opacity: 1;
+    content: "Remote";
+}
+
+
+
+.top {
+    width: 100%;
+}
+
+/* cards */
+
+#cards {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+#cards > * {
+    width: 40%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#cards > * > .image {
+    width: auto;
+    height: auto;
+}
+
+#cards > * > .top {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: clamp(2em, 2vw, 4em);
+}
+
+#cards > * > .comp {
+    color: #6CACE4;
+    font-size: 14px;
+    font-weight: 200;
+    margin-bottom: 20px;
+    text-align: left;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#cards > * > .exp {
+    line-height: 24px;
+    color: #C4C4C4;
+    font-size: 16px;
+    font-weight: 200;
+    text-align: left;
+}
+
