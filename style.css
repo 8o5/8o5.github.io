@@ -337,6 +337,7 @@ p {
 #cards > * > .image {
 	aspect-ratio: 16 / 9;
 	object-fit: fill;
+	margin-bottom: 3%;
 }
 
 #cards > .mbhs > .image {
