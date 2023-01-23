@@ -4,7 +4,13 @@
 	--pink: #dd5789;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;500;600;700&display=swap');
+@font-face {
+	font-family: 'Mona Sans';
+	src: url('/fonts/Mona-Sans.woff2') format('woff2 supports variations'),
+		url('/fonts/Mona-Sans.woff2') format('woff2-variations');
+	font-weight: 200 900;
+	font-stretch: 75% 125%;
+}
 
 @keyframes background-pan {
 	from {
@@ -85,12 +91,13 @@ html {
 }
 
 body {
-	font-family: 'League Spartan', sans-serif;
+	font-family: 'Mona Sans';
 	margin: auto;
 	margin-top: 50px;
 	background-color: rgb(14, 14, 14);
 	display: grid;
 	max-width: 73%;
+	scrollbar-width: none; /* Firefox */
 }
 
 .hero > h1 {
@@ -111,6 +118,7 @@ body {
 	animation-iteration-count: infinite; /* Never stop waving :) */
 	transform-origin: 70% 70%; /* Pivot around the bottom-left palm */
 	display: inline-block;
+	cursor: default;
 }
 
 .hero > h1 > .magic {
@@ -120,6 +128,7 @@ body {
 
 	background-size: 200%;
 
+  background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
@@ -141,6 +150,7 @@ h2 {
 	padding-top: 20px;
 	text-align: left;
 	display: inline-block;
+  width: 80%;
 }
 
 h3 {
@@ -151,7 +161,6 @@ h3 {
 	padding-top: 20px;
 	text-align: left;
 	cursor: pointer;
-	display: inline-block;
 	position: relative;
 }
 
@@ -165,11 +174,10 @@ h3:hover span {
 
 .title {
 	color: white;
-	font-size: 20px;
+	font-size: 30px;
 	font-weight: 100;
 
-	padding-top: 20px;
-	padding-bottom: 20px;
+	padding-bottom: 1em;
 	text-align: left;
 }
 
@@ -203,6 +211,7 @@ p {
 
 .button:focus {
 	background-color: #1e1e1e;
+	color: white;
 }
 
 .content > .comp {
@@ -253,7 +262,7 @@ p {
 /* position title */
 .exp > #OMI:focus ~ #desc > .top > h1:before {
 	color: white;
-	font-weight: 400;
+	font-weight: 600;
 	font-size: 24px;
 	line-height: 29px;
 	visibility: visible;
@@ -287,7 +296,7 @@ p {
 /* position title */
 .exp > #RC:focus ~ #desc > .top > h1:before {
 	color: white;
-	font-weight: 400;
+	font-weight: 600;
 	font-size: 24px;
 	line-height: 29px;
 	visibility: visible;
@@ -317,21 +326,20 @@ p {
 	content: 'Remote';
 }
 
-.top {
-	width: 100%;
+#projects .top {
+	padding-bottom: 1em;
 }
 
 /* cards */
 
 #cards {
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-evenly;
 }
 
 #cards > * {
 	width: 25vw;
-	padding-top: 10px;
-	padding-bottom: 10px;
+	padding-bottom: 5em;
 }
 
 #cards > * > .image {
@@ -341,22 +349,22 @@ p {
 }
 
 #cards > .mbhs > .image {
-	background: url('content/MBHS.jpg') no-repeat;
+	background: url('images/MBHS.jpg') no-repeat;
 	background-size: cover;
 }
 
 #cards > .ominous > .image {
-	background: url('content/ominous.jpg') no-repeat;
+	background: url('images/ominous.jpg') no-repeat;
 	background-size: cover;
 }
 
 #cards > .rocket > .image {
-	background: url('content/rocket.png') no-repeat;
+	background: url('images/rocket.png') no-repeat;
 	background-size: cover;
 }
 
 #cards > .malsync > .image {
-	background: url('content/mal.jpg') no-repeat;
+	background: url('images/mal.jpg') no-repeat;
 	background-size: cover;
 	background-position: center;
 }
