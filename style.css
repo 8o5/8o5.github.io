@@ -22,18 +22,6 @@
 	}
 }
 
-@keyframes bounce-arrow {
-	from {
-		left: 0%;
-		opacity: 0.7;
-	}
-
-	to {
-		left: 10px;
-		opacity: 1;
-	}
-}
-
 @keyframes wave-animation {
 	0% {
 		transform: rotate(0deg);
@@ -270,68 +258,4 @@ h3:hover span {
 
 #projects .top {
 	padding-bottom: 1em;
-}
-
-/* cards */
-
-#cards {
-	display: flex;
-	justify-content: space-evenly;
-}
-
-#cards > * {
-	width: 25vw;
-	padding-bottom: 5em;
-}
-
-#cards > * > .image {
-	aspect-ratio: 16 / 9;
-	object-fit: fill;
-	margin-bottom: 3%;
-}
-
-#cards > .mbhs > .image {
-	background: url('images/MBHS.jpg') no-repeat;
-	background-size: cover;
-}
-
-#cards > .ominous > .image {
-	background: url('images/ominous.jpg') no-repeat;
-	background-size: cover;
-}
-
-#cards > .rocket > .image {
-	background: url('images/rocket.png') no-repeat;
-	background-size: cover;
-}
-
-#cards > .malsync > .image {
-	background: url('images/mal.jpg') no-repeat;
-	background-size: cover;
-	background-position: center;
-}
-
-#cards > * > .top {
-	padding-top: 10px;
-	padding-bottom: 10px;
-	font-size: clamp(2em, 2vw, 4em);
-	color: white;
-}
-
-#cards > * > .comp {
-	color: #6cace4;
-	font-size: 14px;
-	font-weight: 200;
-	margin-bottom: 20px;
-	text-align: left;
-	padding-top: 10px;
-	padding-bottom: 10px;
-}
-
-#cards > * > .exp {
-	line-height: 24px;
-	color: #c4c4c4;
-	font-size: 16px;
-	font-weight: 200;
-	text-align: left;
 }
