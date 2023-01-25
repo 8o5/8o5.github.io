@@ -22,18 +22,6 @@
 	}
 }
 
-@keyframes bounce-arrow {
-	from {
-		left: 0%;
-		opacity: 0.7;
-	}
-
-	to {
-		left: 10px;
-		opacity: 1;
-	}
-}
-
 @keyframes wave-animation {
 	0% {
 		transform: rotate(0deg);
@@ -65,54 +53,19 @@ html {
 	scroll-behavior: smooth;
 }
 
-/* The navigation bar */
-.navbar {
-	background-color: rgba(10, 10, 10, 0.635);
-	backdrop-filter: blur(10px);
-	position: fixed; /* Set the navbar to fixed position */
-	top: 0; /* Position the navbar at the top of the page */
-	width: 73%; /* Full width */
-	z-index: 1;
-}
-
-/* Links inside the navbar */
-.navbar a {
-	float: right;
-	display: block;
-	color: #f2f2f2;
-	text-align: center;
-	padding: 20px 20px;
-	text-decoration: none;
-}
-
-/* Change background on mouse-over */
-.navbar a:hover {
-	text-decoration: underline;
-}
-
-body {
-	font-family: 'Mona Sans';
-	margin: auto;
-	margin-top: 50px;
-	background-color: rgb(14, 14, 14);
-	display: grid;
-	max-width: 73%;
-	scrollbar-width: none; /* Firefox */
-}
-
-.hero > h1 {
+.hero > .h1 {
 	color: white;
 	font-size: 48px;
 	font-weight: 500;
 	text-align: left;
 }
 
-.hero > h1 > .intro {
+.hero > .h1 > .intro {
 	font-size: 24px;
 	line-height: 2;
 }
 
-.hero > h1 > .intro:hover span {
+.hero > .h1 > .intro:hover span {
 	animation-name: wave-animation; /* Refers to the name of your @keyframes element below */
 	animation-duration: 2.5s; /* Change to speed up or slow down */
 	animation-iteration-count: infinite; /* Never stop waving :) */
@@ -121,7 +74,7 @@ body {
 	cursor: default;
 }
 
-.hero > h1 > .magic {
+.hero > .h1 > .magic {
 	font-size: clamp(2em, 2vw, 4em);
 	animation: background-pan 3s linear infinite;
 	background-image: linear-gradient(to right, var(--purple), var(--blue), var(--pink), var(--purple));
@@ -133,18 +86,8 @@ body {
 	-webkit-text-fill-color: transparent;
 }
 
-h1 > .date {
-	color: #c4c4c4;
-	font-weight: 300;
-	position: relative;
-	float: right;
-	font-size: 16px;
-}
-
 h2 {
 	line-height: 24px;
-	color: #f0f0f0;
-	font-weight: 200;
 	font-style: normal;
 
 	padding-top: 20px;
@@ -175,220 +118,13 @@ h3:hover span {
 	color: white;
 	font-size: 30px;
 	font-weight: 100;
-
-	padding-bottom: 1em;
-	text-align: left;
-}
-
-p {
-	margin: 25px 50px 75px;
-}
-
-.button {
-	background-color: black;
-	border-radius: 6px;
-	border: 0;
-	color: #868686;
-	padding: 10px max(10px, 5%);
-	text-align: center;
-	display: inline-flex;
-	font-size: 14px;
-	transition: all 0.5s;
-	cursor: pointer;
-}
-
-.button span {
-	cursor: pointer;
-	display: inline-block;
-	position: relative;
-	transition: 0.5s;
-}
-
-.button:hover {
-	background-color: #1e1e1e;
-}
-
-.button:focus {
-	background-color: #1e1e1e;
-	color: white;
-}
-
-.content > .comp {
-	color: #6cace4;
-	font-size: 16px;
-	font-weight: 200;
-	margin-bottom: 20px;
-	text-align: left;
-}
-
-.content > .exp {
-	line-height: 24px;
-	color: #c4c4c4;
-	font-size: 14px;
-	font-weight: 200;
+	margin-top: 5em;
+	padding-bottom: 2em;
 	text-align: left;
 }
 
 .divider {
-	margin-top: 60px;
-	margin-bottom: 50px;
+	margin: 5em 0;
 	height: 1px;
 	background: #c6c6c6;
-}
-
-/* exp container */
-
-.exp > #desc {
-	margin-top: 20px;
-	position: absolute;
-	width: 100%;
-	opacity: 0;
-	transition: 0.5s;
-	visibility: hidden;
-	max-width: 73%;
-}
-
-.exp > *:focus ~ #desc {
-	opacity: 1;
-}
-
-.exp > p {
-	margin-top: 150px;
-}
-
-/* ominous */
-
-/* position title */
-.exp > #OMI:focus ~ #desc > .top > h1:before {
-	color: white;
-	font-weight: 600;
-	font-size: 24px;
-	line-height: 29px;
-	visibility: visible;
-	opacity: 1;
-	content: 'Graphic Design Lead';
-}
-
-/* dates */
-.exp > #OMI:focus ~ #desc > .top > .date:before {
-	visibility: visible;
-	opacity: 1;
-	content: 'July 2021 - July 2022';
-}
-
-/* description */
-.exp > #OMI:focus ~ #desc > .content > .exp::before {
-	visibility: visible;
-	opacity: 1;
-	content: 'Developed screens and UI components for web application using React and Tailwind. Fixed UI issues and integrated backend APIs utilizing Redux Saga.';
-}
-
-/* location */
-.exp > #OMI:focus ~ #desc > .content > .comp::before {
-	visibility: visible;
-	opacity: 1;
-	content: 'Remote';
-}
-
-/* rocketcards */
-
-/* position title */
-.exp > #RC:focus ~ #desc > .top > h1:before {
-	color: white;
-	font-weight: 600;
-	font-size: 24px;
-	line-height: 29px;
-	visibility: visible;
-	opacity: 1;
-	content: 'UX Designer';
-}
-
-/* dates */
-.exp > #RC:focus ~ #desc > .top > .date:before {
-	visibility: visible;
-	opacity: 1;
-	content: 'November 2021 - March 2022';
-}
-
-/* description */
-
-.exp > #RC:focus ~ #desc > .content > .exp::before {
-	visibility: visible;
-	opacity: 1;
-	content: 'Created entire UX layout with components, provided detailed notes on parts of design for conversion into HTML.';
-}
-
-/* location */
-.exp > #RC:focus ~ #desc > .content > .comp::before {
-	visibility: visible;
-	opacity: 1;
-	content: 'Remote';
-}
-
-#projects .top {
-	padding-bottom: 1em;
-}
-
-/* cards */
-
-#cards {
-	display: flex;
-	justify-content: space-evenly;
-}
-
-#cards > * {
-	width: 25vw;
-	padding-bottom: 5em;
-}
-
-#cards > * > .image {
-	aspect-ratio: 16 / 9;
-	object-fit: fill;
-	margin-bottom: 3%;
-}
-
-#cards > .mbhs > .image {
-	background: url('images/MBHS.jpg') no-repeat;
-	background-size: cover;
-}
-
-#cards > .ominous > .image {
-	background: url('images/ominous.jpg') no-repeat;
-	background-size: cover;
-}
-
-#cards > .rocket > .image {
-	background: url('images/rocket.png') no-repeat;
-	background-size: cover;
-}
-
-#cards > .malsync > .image {
-	background: url('images/mal.jpg') no-repeat;
-	background-size: cover;
-	background-position: center;
-}
-
-#cards > * > .top {
-	padding-top: 10px;
-	padding-bottom: 10px;
-	font-size: clamp(2em, 2vw, 4em);
-	color: white;
-}
-
-#cards > * > .comp {
-	color: #6cace4;
-	font-size: 14px;
-	font-weight: 200;
-	margin-bottom: 20px;
-	text-align: left;
-	padding-top: 10px;
-	padding-bottom: 10px;
-}
-
-#cards > * > .exp {
-	line-height: 24px;
-	color: #c4c4c4;
-	font-size: 16px;
-	font-weight: 200;
-	text-align: left;
 }

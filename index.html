@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
 	<head>
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -10,97 +10,327 @@
 		<link rel="stylesheet" href="style.css" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link rel="preload" href="/fonts/Mona-Sans.woff2" as="font" type="font/woff2" crossorigin />
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+			crossorigin="anonymous" />
+		<script src="https://kit.fontawesome.com/abab35b7a9.js" crossorigin="anonymous"></script>
 	</head>
-	<body>
-		<div class="navbar">
-			<a href="#contact">Contact</a>
-			<a href="#resume">Resume</a>
-			<a href="#projects">Projects</a>
-		</div>
-		<div class="hero">
-			<h1>
+	<body style="max-width: 75%; margin: auto; background: #15181b">
+		<nav
+			class="navbar navbar-expand-md navbar-dark fixed-top bg-dark"
+			style="background-color: rgba(14, 14, 14, 0.635) !important; backdrop-filter: blur(10px); padding-left: 30px">
+			<a class="navbar-brand" href="#">Nic Brum</a>
+			<button
+				class="navbar-toggler"
+				type="button"
+				data-toggle="collapse"
+				data-target="#navbarNavAltMarkup"
+				aria-controls="navbarNavAltMarkup"
+				aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+				<div class="navbar-nav gap-3">
+					<a class="nav-item nav-link" href="#experience">Experience</a>
+					<a class="nav-item nav-link" href="#projects">Projects</a>
+					<a class="nav-item nav-link" href="#contact">Contact</a>
+				</div>
+			</div>
+		</nav>
+		<div class="hero" style="margin-top: 9%">
+			<p class="h1">
 				<span class="intro"><span>👋</span> Hey, I'm<br /></span>
 				<span class="magic">Nic Brum</span>
-			</h1>
+			</p>
 
-			<h2>
+			<p class="lead text-secondary">
 				I'm a graphic designer based in California and currently enrolled in high school. I love creating almost
 				anything that’s online. Whether that’s promotional media, freelance work, or websites. I have been doing both
 				freelancing and professional design-related work for about 5 years now.
-			</h2>
+			</p>
 
-			<h3>Say hi <span>&#10132;</span></h3>
+			<a
+				href="#contact"
+				class="btn btn-primary"
+				tabindex="-1"
+				role="button"
+				aria-disabled="true"
+				style="margin-top: 1em"
+				>Get in touch <i class="fa-regular fa-comment"></i></a
+			>
 		</div>
 
 		<p></p>
 
-		<div class="exp">
+		<div id="experience" class="exp">
 			<div class="title">EXPERIENCE</div>
 
-			<button class="button" id="OMI"><span>Ominous</span></button>
-			<button class="button" id="RC"><span>RocketCards</span></button>
-			<button class="button" id="MRKT"><span>PokeMRKT</span></button>
-			<button class="button" id="BIBLE"><span>TheBotBible</span></button>
-			<button class="button" id="FREE"><span>Freelance</span></button>
-			<button class="button" id="CHAR"><span>Charity</span></button>
-
-			<div id="desc">
-				<div class="top">
-					<h1>Placeholder Text <span class="date">Month 2022 - Month 2022</span></h1>
+			<div class="row row-cols-2 row-cols-xxl-3 row-gap-3">
+				<div class="col">
+					<div class="shadow-sm card mb-3" style="max-width: 540px">
+						<div class="row g-0">
+							<div class="col-md-4">
+								<img
+									src="images/ominous_400x400.jpeg"
+									class="img-fluid rounded-start"
+									alt="Ominous Logo"
+									style="object-fit: cover; width: 100%; height: 100%" />
+							</div>
+							<div class="col-md-8">
+								<div class="card-body">
+									<h5 class="card-title text-white h4">
+										Ominous
+										<span
+											class="badge badge-pill badge-info text-secondary-emphasis bg-secondary"
+											style="font-weight: 500"
+											>Remote</span
+										>
+									</h5>
+									<p class="card-text text-lead">
+										Created numerous designs for promotional media to be used on brand social media accounts.
+									</p>
+									<p class="card-text"><small class="text-muted">July 2021 - July 2022</small></p>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
-
-				<div class="content">
-					<div class="comp">Placeholder Text</div>
-					<div class="exp">Placeholder Text<br />Placeholder Text<br />Placeholder Text</div>
+				<div class="col">
+					<div class="shadow-sm card mb-3" style="max-width: 540px">
+						<div class="row g-0">
+							<div class="col-md-4">
+								<img
+									src="images/rocket_logo.png"
+									class="img-fluid rounded-start"
+									alt="RocketCards Logo"
+									style="object-fit: cover; width: 100%; height: 100%" />
+							</div>
+							<div class="col-md-8">
+								<div class="card-body">
+									<h5 class="card-title text-white h4">
+										RocketCards
+										<span
+											class="badge badge-pill badge-info text-secondary-emphasis bg-secondary"
+											style="font-weight: 500"
+											>Remote</span
+										>
+									</h5>
+									<p class="card-text text-lead">
+										Created entire UI/UX layout with components on Figma, also provided detailed notes for HTML
+										structure.
+									</p>
+									<p class="card-text"><small class="text-muted">November 2021 - March 2022</small></p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="shadow-sm card mb-3" style="max-width: 540px">
+						<div class="row g-0">
+							<div class="col-md-4">
+								<img
+									src="images/pokemrkt_logo.png"
+									class="img-fluid rounded-start"
+									alt="PokeMRKT Logo"
+									style="object-fit: cover; width: 100%; height: 100%" />
+							</div>
+							<div class="col-md-8">
+								<div class="card-body">
+									<h5 class="card-title text-white h4">
+										PokeMRKT
+										<span
+											class="badge badge-pill badge-info text-secondary-emphasis bg-secondary"
+											style="font-weight: 500"
+											>Remote</span
+										>
+									</h5>
+									<p class="card-text text-lead">
+										Created numerous designs for promotional media to be used on brand social media accounts.
+									</p>
+									<p class="card-text"><small class="text-muted">2020 - 2021</small></p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="shadow-sm card mb-3" style="max-width: 540px">
+						<div class="row g-0">
+							<div class="col-md-4">
+								<img
+									src="images/thebotbible_logo.png"
+									class="img-fluid rounded-start"
+									alt="TheBotBible Logo"
+									style="object-fit: cover; width: 100%; height: 100%" />
+							</div>
+							<div class="col-md-8">
+								<div class="card-body">
+									<h5 class="card-title text-white h4">
+										TheBotBible
+										<span
+											class="badge badge-pill badge-info text-secondary-emphasis bg-secondary"
+											style="font-weight: 500"
+											>Remote</span
+										>
+									</h5>
+									<p class="card-text text-lead">
+										Created numerous designs for promotional media to be used on brand social media accounts.
+									</p>
+									<p class="card-text"><small class="text-muted">2020 - 2021</small></p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="shadow-sm card mb-3" style="max-width: 540px">
+						<div class="row g-0">
+							<div class="col-md-8">
+								<div class="card-body">
+									<h5 class="card-title text-white h4">Freelance</h5>
+									<p class="card-text text-lead">
+										Lots of experience with individual projects including personal and brand work.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="shadow-sm card mb-3" style="max-width: 540px">
+						<div class="row g-0">
+							<div class="col-md-8">
+								<div class="card-body">
+									<h5 class="card-title text-white h4">Charity</h5>
+									<p class="card-text text-lead">
+										Multiple designs donated to companies and worked with companies to improve website UX with no
+										compensation.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
-			<p></p>
 		</div>
 		<div class="divider"></div>
 		<div id="projects" href="#projects">
 			<div class="top">
 				<div class="title">FEATURED WORKS</div>
 			</div>
-			<div id="cards">
-				<div class="mbhs">
-					<div class="image"></div>
-					<div class="top">Morro Bay High School</div>
-					<div class="exp">
-						Provided ideas / prototype design for a potential redesign of the website of Morro Bay High School.
-						Volunteer work.
+			<div class="row row-cols-2 row-cols-xl-4 row-gap-3">
+				<div class="col">
+					<div class="card">
+						<img
+							class="card-img-top"
+							src="images/ominous.jpg"
+							alt="Ominous Website"
+							style="aspect-ratio: 16 / 9; object-fit: cover; object-position: top" />
+						<div class="card-body">
+							<h5 class="card-title h3 text-white">Ominous</h5>
+							<p class="card-text">
+								Provided ideas / prototype design for potential redeisng of the Ominous home page and dashboard page.
+								Compensated for design.
+							</p>
+							<span class="badge badge-pill badge-info bg-secondary">UX/UI Design</span>
+						</div>
 					</div>
-					<div class="comp">UX Design - Photography</div>
 				</div>
-				<div class="ominous">
-					<div class="image"></div>
-					<div class="top">Ominous</div>
-					<div class="exp">
-						Provided ideas / prototype design for potential redeisng of the Ominous home page and dashboard page.
-						Compensated for design.
+				<div class="col">
+					<div class="card">
+						<img
+							class="card-img-top"
+							src="images/mal.jpg"
+							alt="MAL Logo"
+							style="aspect-ratio: 16 / 9; object-fit: cover; object-position: center" />
+						<div class="card-body">
+							<h5 class="card-title h3 text-white">MAL</h5>
+							<p class="card-text">Created a prototype redesign for a Chrome extension MALSync. Volunteer work.</p>
+							<span class="badge badge-pill badge-info bg-secondary">Logo Design</span>
+						</div>
 					</div>
-					<div class="comp">UX Design - UI Design</div>
 				</div>
-			</div>
-
-			<div id="cards">
-				<div class="rocket">
-					<div class="image"></div>
-					<div class="top">RocketCards</div>
-					<div class="exp">
-						Created a fully designed website including Homepage, About Me, Dashboard, UI Popups, and more. Compensated
-						for design.
+				<div class="col">
+					<div class="card">
+						<img
+							class="card-img-top"
+							src="images/MBHS.jpg"
+							alt="MBHS Website"
+							style="aspect-ratio: 16 / 9; object-fit: cover; object-position: top" />
+						<div class="card-body">
+							<h5 class="card-title h3 text-white">MBHS</h5>
+							<p class="card-text">
+								Provided ideas / prototype design for a potential redesign of the website of Morro Bay High School.
+								Volunteer work.
+							</p>
+							<span class="badge badge-pill badge-info bg-secondary">UX/UI Design</span>
+							<span class="badge badge-pill badge-info bg-secondary">Photography</span>
+						</div>
 					</div>
-					<div class="comp">UX Design - UI Design</div>
 				</div>
-
-				<div class="malsync">
-					<div class="image"></div>
-					<div class="top">MALSync</div>
-					<div class="exp">Created a prototype redesign for a Chrome extension MALSync. Volunteer work.</div>
-					<div class="comp">Logo Design</div>
+				<div class="col">
+					<div class="card">
+						<img
+							class="card-img-top"
+							src="images/rocket.png"
+							alt="Rocket Cards Website"
+							style="aspect-ratio: 16 / 9; object-fit: cover; object-position: top" />
+						<div class="card-body">
+							<h5 class="card-title h3 text-white">RocketCards</h5>
+							<p class="card-text">
+								Created a fully designed website including Homepage, About Me, Dashboard, UI Popups, and more.
+								Compensated for design.
+							</p>
+							<span class="badge badge-pill badge-info bg-secondary">UX/UI Design</span>
+						</div>
+					</div>
+				</div>
+				<div class="col" style="visibility: hidden">
+					<div class="card">
+						<img
+							class="card-img-top"
+							src=""
+							alt="Website"
+							style="aspect-ratio: 16 / 9; object-fit: cover; object-position: top" />
+						<div class="card-body">
+							<h5 class="card-title h3 text-white"></h5>
+							<p class="card-text"></p>
+							<span class="badge badge-pill badge-info bg-secondary">UX/UI Design</span>
+						</div>
+					</div>
+				</div>
+				<div class="col" style="visibility: hidden">
+					<div class="card">
+						<img
+							class="card-img-top"
+							src=""
+							alt="Website"
+							style="aspect-ratio: 16 / 9; object-fit: cover; object-position: top" />
+						<div class="card-body">
+							<h5 class="card-title h3 text-white"></h5>
+							<p class="card-text"></p>
+							<span class="badge badge-pill badge-info bg-secondary">UX/UI Design</span>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
+		<div id="contact" class="d-grid gap1" style="margin: 10em 0 3em 0">
+			<div id="full" class="d-flex mb-1 gap-3">
+                <div class="h3 flex-fill">Contact</div>
+				<a href="mailto:nic@nicbrum.com" role="button" aria-disabled="true" class="btn btn-outline-primary flex-fill" type="button" style="width: auto"><i class="fa-solid fa-envelope"></i> Send an email </a>
+				<a href="https://github.com/8o5" role="button" aria-disabled="true" class="btn btn-outline-primary flex-fill" type="button" style="width: auto"><i class="fa-brands fa-github"></i> GitHub </button>
+				<a href="#" role="button" aria-disabled="true" class="btn btn-outline-primary flex-fill disabled" type="button" style="width: auto"><i class="fa-brands fa-linkedin"></i> Linkedin </a>
+			</div>
+		</div>
+
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+			crossorigin="anonymous"></script>
 	</body>
 </html>
