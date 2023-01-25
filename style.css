@@ -86,13 +86,6 @@ html {
 	-webkit-text-fill-color: transparent;
 }
 
-.h1 > .date {
-	font-weight: 300;
-	position: relative;
-	float: right;
-	font-size: 16px;
-}
-
 h2 {
 	line-height: 24px;
 	font-style: normal;
@@ -130,132 +123,8 @@ h3:hover span {
 	text-align: left;
 }
 
-.button {
-	background-color: black;
-	border-radius: 6px;
-	border: 0;
-	color: #868686;
-	padding: 10px max(10px, 5%);
-	text-align: center;
-	display: inline-flex;
-	font-size: 14px;
-	transition: all 0.5s;
-	cursor: pointer;
-}
-
-.button span {
-	cursor: pointer;
-	display: inline-block;
-	position: relative;
-	transition: 0.5s;
-}
-
-.button:hover {
-	background-color: #1e1e1e;
-}
-
-.button:focus {
-	background-color: #1e1e1e;
-	color: white;
-}
-
-.content > .comp {
-	color: #6cace4;
-	font-size: 16px;
-	font-weight: 200;
-	margin-bottom: 20px;
-	text-align: left;
-}
-
-.content > .exp {
-	line-height: 24px;
-	color: #c4c4c4;
-	font-size: 14px;
-	font-weight: 200;
-	text-align: left;
-}
-
 .divider {
-	margin-top: 12em;
+	margin: 5em 0;
 	height: 1px;
 	background: #c6c6c6;
-}
-
-/* exp container */
-
-.exp > #desc {
-	margin-top: 20px;
-	position: absolute;
-	opacity: 0;
-	transition: 0.5s;
-	max-width: 73%;
-}
-
-.exp > *:focus ~ #desc {
-	opacity: 1;
-}
-
-/* ominous */
-
-/* position title */
-.exp > #OMI:focus ~ #desc > .top > .h1:before {
-	color: white;
-	font-weight: 600;
-	font-size: 24px;
-	line-height: 29px;
-	opacity: 1;
-	content: 'Graphic Design Lead';
-}
-
-/* dates */
-.exp > #OMI:focus ~ #desc > .top > .date:before {
-	opacity: 1;
-	content: 'July 2021 - July 2022';
-}
-
-/* description */
-.exp > #OMI:focus ~ #desc > .content > .exp::before {
-	opacity: 1;
-	content: 'Created numerous designs for promotional media to be used on brand social media accounts.';
-}
-
-/* location */
-.exp > #OMI:focus ~ #desc > .content > .comp::before {
-	opacity: 1;
-	content: 'Remote';
-}
-
-/* rocketcards */
-
-/* position title */
-.exp > #RC:focus ~ #desc > .top > .h1:before {
-	color: white;
-	font-weight: 600;
-	font-size: 24px;
-	line-height: 29px;
-	opacity: 1;
-	content: 'UX Designer';
-}
-
-/* dates */
-.exp > #RC:focus ~ #desc > .top > .date:before {
-	opacity: 1;
-	content: 'November 2021 - March 2022';
-}
-
-/* description */
-
-.exp > #RC:focus ~ #desc > .content > .exp::before {
-	opacity: 1;
-	content: 'Created entire UX layout with components, provided detailed notes on parts of design for conversion into HTML.';
-}
-
-/* location */
-.exp > #RC:focus ~ #desc > .content > .comp::before {
-	opacity: 1;
-	content: 'Remote';
-}
-
-#projects .top {
-	padding-bottom: 1em;
 }
