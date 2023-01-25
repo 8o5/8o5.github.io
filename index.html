@@ -15,6 +15,7 @@
 			rel="stylesheet"
 			integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
 			crossorigin="anonymous" />
+		<script src="https://kit.fontawesome.com/abab35b7a9.js" crossorigin="anonymous"></script>
 	</head>
 	<body style="max-width: 75%; margin: auto; background: #15181b">
 		<nav
@@ -32,13 +33,14 @@
 				<span class="navbar-toggler-icon"></span>
 			</button>
 			<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-				<div class="navbar-nav">
+				<div class="navbar-nav gap-3">
+					<a class="nav-item nav-link" href="#experience">Experience</a>
 					<a class="nav-item nav-link" href="#projects">Projects</a>
 					<a class="nav-item nav-link" href="#contact">Contact</a>
 				</div>
 			</div>
 		</nav>
-		<div class="hero" style="margin-top: 7%">
+		<div class="hero" style="margin-top: 9%">
 			<p class="h1">
 				<span class="intro"><span>👋</span> Hey, I'm<br /></span>
 				<span class="magic">Nic Brum</span>
@@ -50,12 +52,20 @@
 				freelancing and professional design-related work for about 5 years now.
 			</p>
 
-			<h3 class="text-white">Lets get in touch <span>&#10132;</span></h3>
+			<a
+				href="#contact"
+				class="btn btn-primary"
+				tabindex="-1"
+				role="button"
+				aria-disabled="true"
+				style="margin-top: 1em"
+				>Get in touch <i class="fa-regular fa-comment"></i></a
+			>
 		</div>
 
 		<p></p>
 
-		<div class="exp">
+		<div id="experience" class="exp">
 			<div class="title">EXPERIENCE</div>
 
 			<div class="row row-cols-2 row-cols-md-2 g-1">
@@ -109,7 +119,8 @@
 										>
 									</h5>
 									<p class="card-text text-lead">
-										Created entire UI/UX layout with components on Figma, also provided detailed notes for HTML structure.
+										Created entire UI/UX layout with components on Figma, also provided detailed notes for HTML
+										structure.
 									</p>
 									<p class="card-text"><small class="text-muted">November 2021 - March 2022</small></p>
 								</div>
@@ -175,14 +186,12 @@
 						</div>
 					</div>
 				</div>
-                <div class="col">
+				<div class="col">
 					<div class="shadow-sm card mb-3" style="max-width: 540px">
 						<div class="row g-0">
 							<div class="col-md-8">
 								<div class="card-body">
-									<h5 class="card-title text-white h4">
-										Freelance
-									</h5>
+									<h5 class="card-title text-white h4">Freelance</h5>
 									<p class="card-text text-lead">
 										Lots of experience with individual projects including personal and brand work.
 									</p>
@@ -191,16 +200,15 @@
 						</div>
 					</div>
 				</div>
-                <div class="col">
+				<div class="col">
 					<div class="shadow-sm card mb-3" style="max-width: 540px">
 						<div class="row g-0">
 							<div class="col-md-8">
 								<div class="card-body">
-									<h5 class="card-title text-white h4">
-										Charity
-									</h5>
+									<h5 class="card-title text-white h4">Charity</h5>
 									<p class="card-text text-lead">
-										Multiple designs donated to companies and worked with companies to improve website UX with no compensation.
+										Multiple designs donated to companies and worked with companies to improve website UX with no
+										compensation.
 									</p>
 								</div>
 							</div>
@@ -221,7 +229,7 @@
 							class="card-img-top"
 							src="images/ominous.jpg"
 							alt="Ominous Website"
-							style="aspect-ratio: 16 / 9; object-fit: cover; object-position: top;" />
+							style="aspect-ratio: 16 / 9; object-fit: cover; object-position: top" />
 						<div class="card-body">
 							<h5 class="card-title h3 text-white">Ominous</h5>
 							<p class="card-text">
@@ -238,7 +246,7 @@
 							class="card-img-top"
 							src="images/mal.jpg"
 							alt="MAL Logo"
-							style="aspect-ratio: 16 / 9; object-fit: cover; object-position: center;" />
+							style="aspect-ratio: 16 / 9; object-fit: cover; object-position: center" />
 						<div class="card-body">
 							<h5 class="card-title h3 text-white">MAL</h5>
 							<p class="card-text">Created a prototype redesign for a Chrome extension MALSync. Volunteer work.</p>
@@ -252,7 +260,7 @@
 							class="card-img-top"
 							src="images/MBHS.jpg"
 							alt="MBHS Website"
-							style="aspect-ratio: 16 / 9; object-fit: cover; object-position: top;" />
+							style="aspect-ratio: 16 / 9; object-fit: cover; object-position: top" />
 						<div class="card-body">
 							<h5 class="card-title h3 text-white">MBHS</h5>
 							<p class="card-text">
@@ -311,6 +319,15 @@
 				</div>
 			</div>
 		</div>
+		<div id="contact" class="d-grid gap1" style="margin: 10em 0 3em 0">
+			<div id="full" class="d-flex mb-1 gap-3">
+                <div class="h3 flex-fill">Contact</div>
+				<a href="mailto:nic@nicbrum.com" role="button" aria-disabled="true" class="btn btn-outline-primary flex-fill" type="button" style="width: auto"><i class="fa-solid fa-envelope"></i> Send an email </a>
+				<a href="https://github.com/8o5" role="button" aria-disabled="true" class="btn btn-outline-primary flex-fill" type="button" style="width: auto"><i class="fa-brands fa-github"></i> GitHub </button>
+				<a href="#" role="button" aria-disabled="true" class="btn btn-outline-primary flex-fill disabled" type="button" style="width: auto"><i class="fa-brands fa-linkedin"></i> Linkedin </a>
+			</div>
+		</div>
+
 		<script
 			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
 			integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
