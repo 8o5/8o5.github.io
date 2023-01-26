@@ -12,6 +12,7 @@
 	font-stretch: 75% 125%;
 }
 
+
 @keyframes background-pan {
 	from {
 		background-position: 0% center;
@@ -53,16 +54,22 @@ html {
 	scroll-behavior: smooth;
 }
 
+body {
+	background: #15181b !important;
+	font-family: 'Mona Sans', sans-serif !important;
+}
+
 .hero > .h1 {
 	color: white;
 	font-size: 48px;
-	font-weight: 500;
+	font-weight: 700;
 	text-align: left;
 }
 
 .hero > .h1 > .intro {
 	font-size: 24px;
 	line-height: 2;
+	font-weight: 500;
 }
 
 .hero > .h1 > .intro:hover span {
@@ -81,18 +88,9 @@ html {
 
 	background-size: 200%;
 
-  background-clip: text;
+	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
-}
-
-h2 {
-	line-height: 24px;
-	font-style: normal;
-
-	padding-top: 20px;
-	text-align: left;
-	display: inline-block;
 }
 
 h3 {
