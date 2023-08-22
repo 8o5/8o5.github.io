@@ -17,6 +17,7 @@
 			integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
 			crossorigin="anonymous" />
 		<script src="https://kit.fontawesome.com/abab35b7a9.js" crossorigin="anonymous"></script>
+		<script type="text/javascript" src="js/fadein.js"></script>
 	</head>
 	<body style="max-width: 79%; margin: auto">
 		<nav
@@ -41,14 +42,14 @@
 				</div>
 			</div>
 		</nav>
-		<div class="hero" style="margin-top: 9%">
+		<div class="hero" style="margin-top: 9%; padding-bottom: 10vh">
 			<p class="h1">
 				<span class="intro"><span>👋</span> Hey, I'm<br /></span>
 				<span class="magic">Nic Brum</span>
 			</p>
 
-			<p class="lead text-secondary" style="font-weight: 400">
-				I'm a graphic designer based in California and currently enrolled in high school. I love creating almost anything that’s online. Whether
+			<p class="lead text-secondary" style="font-weight: 400; animation-name: manual-reveal; animation-duration: 2s; animation-iteration-count: 1;">
+				I'm a computer science major with a passion for graphic design and web development. I love creating almost anything that’s online. Whether
 				that’s promotional media, freelance work, or websites. I have 5+ years of experience doing both freelancing and professional design-related
 				work.
 			</p>
@@ -62,9 +63,9 @@
 			<div class="top">
 				<div class="title">SKILLS</div>
 			</div>
-			<div class="row row-cols-1 row-cols-md-3 g-4">
+			<div class="row row-cols-2 row-cols-md-3 g-4">
 				<div class="col">
-					<div class="card">
+					<div class="card revealX" style="transition: 1s all ease-in-out;">
 						<div class="row p-1">
 							<div class="col-md-4">
 								<img src="images/photoshop.webp" class="img-fluid rounded" alt="photoshop" />
@@ -79,7 +80,7 @@
 					</div>
 				</div>
 				<div class="col">
-					<div class="card">
+					<div class="card revealX" style="transition: 1.5s all ease-in-out;">
 						<div class="row p-1">
 							<div class="col-md-4">
 								<img src="images/figma.webp" class="img-fluid rounded" alt="figma" />
@@ -94,7 +95,7 @@
 					</div>
 				</div>
 				<div class="col">
-					<div class="card">
+					<div class="card revealX" style="transition: 2s all ease-in-out;">
 						<div class="row p-1">
 							<div class="col-md-4">
 								<img src="images/blender.webp" class="img-fluid rounded" alt="blender" />
@@ -111,14 +112,12 @@
 			</div>
 		</div>
 
-		<div class="divider"></div>
-
 		<div id="experience" class="exp">
 			<div class="title">EXPERIENCE</div>
 
 			<div class="row row-cols-2 row-cols-xxl-3 row-gap-3">
 				<div class="col">
-					<div class="shadow-sm card" style="max-width: 30em">
+					<div class="shadow-sm card revealY" style="max-width: 30em; transition: 1s all ease-in-out;">
 						<div class="row g-0">
 							<div class="col-md-4">
 								<img
@@ -138,7 +137,7 @@
 					</div>
 				</div>
 				<div class="col">
-					<div class="shadow-sm card" style="max-width: 30em">
+					<div class="shadow-sm card revealY" style="max-width: 30em; transition: 1.5s all ease-in-out;">
 						<div class="row g-0">
 							<div class="col-md-4">
 								<img
@@ -158,7 +157,7 @@
 					</div>
 				</div>
 				<div class="col">
-					<div class="shadow-sm card" style="max-width: 30em">
+					<div class="shadow-sm card revealY" style="max-width: 30em; transition: 2s all ease-in-out;">
 						<div class="row g-0">
 							<div class="col-md-4">
 								<img
@@ -178,7 +177,7 @@
 					</div>
 				</div>
 				<div class="col">
-					<div class="shadow-sm card" style="max-width: 30em">
+					<div class="shadow-sm card revealY" style="max-width: 30em; transition: 1s all ease-in-out;">
 						<div class="row g-0">
 							<div class="col-md-4">
 								<img
@@ -198,7 +197,7 @@
 					</div>
 				</div>
 				<div class="col">
-					<div class="shadow-sm card" style="max-width: 30em">
+					<div class="shadow-sm card revealY" style="max-width: 30em; transition: 1.5s all ease-in-out;">
 						<div class="row g-0">
 							<div class="col-md-4">
 								<img
@@ -219,7 +218,6 @@
 				</div>
 			</div>
 		</div>
-		<div class="divider"></div>
 		<div id="projects" href="#projects">
 			<div class="top">
 				<div class="title">FEATURED WORKS</div>

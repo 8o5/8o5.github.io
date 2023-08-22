@@ -50,6 +50,58 @@
 	}
 }
 
+/* manual reveal */
+
+@keyframes manual-reveal {
+	0% {
+		position: relative;
+		opacity: 0;
+		transition: 1s all ease-in-out;
+		transform: translateX(-2em);
+	}
+	100% {
+		position: relative;
+		opacity: 1;
+		transition: 1s all ease-in-out;
+		transform: translateX(0);
+	}
+}
+
+/* reveal anim */
+
+.revealX {
+  position: relative;
+  opacity: 0;
+  transition: 1s all ease-in-out;
+  transform: translateX(-2em);
+}
+
+.revealY {
+  position: relative;
+  opacity: 0;
+  transition: 1s all ease-in-out;
+  transform: translateY(-2em);
+}
+
+@media (prefers-reduced-motion) {
+  .revealX {
+    transition: none;
+  }
+  .revealY {
+    transition: none;
+  }
+}
+
+.revealX.active {
+  transform: translate(0);
+  opacity: 1;
+}
+
+.revealY.active {
+  transform: translate(0);
+  opacity: 1;
+}
+
 html {
 	scroll-behavior: smooth;
 }
@@ -72,10 +124,10 @@ body {
 	font-weight: 500;
 }
 
-.hero > .h1 > .intro:hover span {
+.hero > .h1 > .intro span {
 	animation-name: wave-animation; /* Refers to the name of your @keyframes element below */
 	animation-duration: 2.5s; /* Change to speed up or slow down */
-	animation-iteration-count: infinite; /* Never stop waving :) */
+	animation-iteration-count: 1; /* Never stop waving :) */
 	transform-origin: 70% 70%; /* Pivot around the bottom-left palm */
 	display: inline-block;
 	cursor: default;
@@ -119,10 +171,4 @@ h3:hover span {
 	margin-top: 5em;
 	padding-bottom: 2em;
 	text-align: left;
-}
-
-.divider {
-	margin: 5em 0;
-	height: 1px;
-	background: #c6c6c6;
 }
