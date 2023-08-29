@@ -172,3 +172,10 @@ h3:hover span {
 	padding-bottom: 2em;
 	text-align: left;
 }
+
+#skills img {
+	float: left;
+    width:  100px;
+    height: 100px;
+    object-fit: cover;
+}
